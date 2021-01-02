@@ -33,23 +33,3 @@ spec:
   ports:
     - port: 80
       targetPort: 80
-
-
- azureaksacrdemo.azurecr.io/customnginxapp1
-
-
-##[error]Error from server (Forbidden): secrets is forbidden: User "system:serviceaccount:default:***"
-
-kubectl get serviceAccounts default -n default -o=jsonpath={.secrets[*].name}
-kubectl get secret default-token-r9cm7 -n default -o json
-
-
-kubectl get secret <service-account-secret-name> -n <namespace> -o json
-
-
-pvenkat1967 account:
-
-aks: aksdemo
-acr: aksacrdemo03
-
-
